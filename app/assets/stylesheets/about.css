@@ -1,0 +1,40 @@
+.content.about-page {
+    background: var(--cor-de-fundo);
+    padding: 20px;
+}
+.content.about-page h1 {
+    color: var(--azul-cor-secundario);
+    font-size: 60px;
+}
+.content.about-page h2 {
+    color: var(--azul-cor-secundario);
+    font-size: 40px;
+    margin-top: 20px;
+}
+.content.about-page p, .content.about-page ul {
+    color: white;
+    font-size: 18px;
+    margin: 10px 0;
+}
+.content.about-page ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+.content.about-page a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+.content.about-page a:hover {
+    text-decoration: underline;
+}
+
+.conteiner-contact {
+    margin: 10rem 5rem;
+}
+
+
+.contact-column {
+    color: blue;
+    display: flex;
+    margin: 4rem 0;
+}

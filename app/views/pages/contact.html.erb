@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Blog</title>
+    <meta charset="utf-8">
+</head>
+<header>
+        <nav>
+            <ul class='nav-links'>
+                <li><a> <%= link_to "Home", root_path %></a></li>
+                <li><a> <%= link_to "Sobre mim", about_path %></a></li>
+                <li><a> <%= link_to "Contato", contact_path %></a></li>
+            </ul>
+        </nav>
+</header>
+<body>
+<div class="conteiner-contact">
+<div class="contact-column">
+  <div class="social-links">
+    <a href=https://www.instagram.com/robsoonms/><i class="fab fa-instagram"></i> Instagram</a>
+    <a href=https://www.linkedin.com/in/robson-mesquita-45ab00358/><i class="fab fa-linkedin"></i> LinkedIn</a>
+    <a href=https://github.com/Robson-M><i class="fab fa-github"></i> GitHub</a>
+  </div>
+</div>
+<div class="contact-column">
+  <div class="contact-info">
+    <p>WhatsApp: <a href=https://wa.me/557788502106>+55 77 8850-2106</a></p>
+    <p>Email: <a href=mailto:Robsonmes11@gmail.com>Robsonmes11@gmail.com</a></p>
+    <p>Telefone: <a href="tel:+0987654321">+55 77 9 8850-2106</a></p>
+  </div>
+  </div>
+    <p><a><%= link_to "Currículo", "/Curriculo.pdf" %></a></p>
+</div>
+</div>
+</body>
+<footer>
+</footer>
+</html>

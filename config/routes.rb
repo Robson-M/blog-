@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
+  
+  resources :posts, only: [:index, :show]
+  
+  root "posts#index"
 
-    resources :posts
-    root "posts#index"
-  end
+  get "about", to: "pages#about"
+
+  get "contact", to: "pages#contact"
+
 end

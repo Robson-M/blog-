@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Blog</title>
+    <meta charset="utf-8">
+    <%= stylesheet_link_tag 'show' %>
+</head>
+<header>
+  <div class="back">
+    <h1 class='title-back'> <%= link_to "\u{1F814} Sair", root_path %></h1>
+  </div>
+</header>
+<body>
+<div class="conteiner-body">
+    <h1 class='title-show'><%= @post.title %></h1>
+
+<div class="conteiner-show">
+  <div class="img-show">
+      <%= image_tag @post.image, style: "width:100%"  %>
+  </div>
+      <div class="conteiner-right">
+          <div class="to">
+            <ul class="tools">
+              <% @post.tools&.split(", ")&.each do |tool| %>
+                <p class="tool"><%= tool %></p>
+              <% end %>
+            </ul>
+
+          </div>
+      </div>
+</div>
+<div class="links-show-conteiner">
+  <a class="link-show" href="<%= @post.deployment_link %>">Projeto completo</a>
+  <a class="link-show" href="<%= @post.github_link %>">GitHub</a>
+</div>
+  <h3 class="title-show-description">Descrição do Projeto</h3>
+  <p class="date"> Inicio: <%= @post.start_date&.strftime("%d/%m/%Y") %></p>
+  <p class="paragraph"><%= @post.content %></p>
+</div>
+</body>
+</html>

@@ -1,10 +1,231 @@
-/*
- * This is a manifest file that'll be compiled into application.css.
- *
- * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
- * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
- * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
- * depending on specificity.
- *
- * Consider organizing styles into separate files for maintainability.
- */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --fundo-cor: #0e0e0e;
+  --branco-cor: white;
+  --preto-cor: black;
+  --roxo-cor-escuro: #1c002e;
+  --azul-cor-secundario: #021297;
+  --cor-card: white;
+  --font-principal: Arial, Helvetica, sans-serif;
+}
+
+body {
+  font-family: var(--font-principal);
+  background: var(--fundo-cor);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header/Blog Title */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li, a, button {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.nav-links {
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links li{
+  display: inline-block;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.li-show {
+  color: var(--azul-cor-secundario);
+}
+
+.banner {
+  color: white;
+  font-size: 70px;
+  text-align: center;
+  padding: 50px;
+  margin: 45px 0;
+}
+
+.line {
+  height: 10%;
+  border: 1px;
+  border-style: solid;
+  border-color: var(--roxo-cor-escuro);
+}
+
+/* Create two unequal columns that float next to each other */
+.leftcolumn {
+  display: flex;
+  float: left;
+  width: 100%;
+  flex-wrap: wrap;
+  align-content: space-around;
+  gap: 10px 30px;
+}
+
+/* Fake image placeholder */
+.fakeimg {
+  background-color: #636363;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: var(--roxo-cor-escuro);
+  padding: 20px;
+  margin-top: 20px;
+  width: 600px;
+}
+
+.card-title {
+  color: var(--branco-cor);
+  font-size: 36px;
+}
+
+.card-title:hover {
+  color: #e7e7e7;
+}
+
+.card-date {
+  color: var(--branco-cor);
+}
+
+.card-sub-title {
+  color: var(--branco-cor);
+  font-size: 25px;
+  max-width: 40ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Clear floats after the columns */
+.row {
+  margin: 20px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* .sobreMin {
+  color: var(--branco-cor);
+  background-color: var(--azul-cor-secundario);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.textoSobreMin {
+  display: grid;
+} */
+
+
+/* Footer */
+footer {
+  background-color: #181818;
+  color: white;
+  padding: 30px 100px;
+  align-items: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 20px;
+}
+
+.footer-column {
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  
+}
+
+footer nav ul {
+  list-style: none;
+}
+
+footer nav ul li {
+  padding: 1rem 0 1rem 5rem;
+  margin: 10px 0;
+}
+
+footer nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.social-links a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.social-links i {
+  margin-right: 5px;
+}
+
+.contact-info p {
+  margin: 5px 0;
+  padding: 1rem 0;
+}
+
+.contact-info a {
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+  .footer-column {
+    margin-bottom: 20px;
+  }
+}
+
+
+/* Responsive layout - when the screen is less than 800px wide */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+  width: 100%;
+  padding: 0;
+  }
+
+  li, a, button{
+      font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 400px){
+  .leftcolumn, .rightcolumn{
+    width: 200%;
+  }
+
+  li, a, button{
+    font-size: 8px;
+}
+.footer-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+}

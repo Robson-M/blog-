@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Blog</title>
+    <meta charset="utf-8">
+</head>
+<header>
+        <nav>
+            <ul class='nav-links'>
+                <li><a> <%= link_to "Home", root_path %></a></li>
+                <li><a> <%= link_to "Sobre mim", about_path %></a></li>
+                <li><a> <%= link_to "Contato", contact_path %></a></li>
+            </ul>
+        </nav>
+</header>
+<body>
+<div class="content about-page">
+<h1>Sobre Mim</h1>
+<p>Olá! Sou Robson, sou desenvolvedor full-stack Ruby on Rails. Sou movido pelo desejo de aprender continuamente e transformar ideias em projetos funcionais.</p>
+
+<h2>Formação e Experiência</h2>
+<p>Como desenvolvedor em formação, dedico-me a estudar e praticar conceitos de backend, frontend e banco de dados. Desenvolvi projetos pessoais que reforçam meu domínio em Ruby on Rails, Git, Docker e ambientes Linux. Minha abordagem proativa e comprometida me permite resolver problemas reais e entregar resultados de qualidade.</p>
+<ul>
+  <li><strong>Formação Ruby on Rails – Alura</strong> (64h): Fundamentos de Ruby, lógica de programação, e criação de aplicações web completas com Rails.</li>
+  <li><strong>Formação Front-end – Alura</strong> (44h): HTML, CSS, Flexbox, responsividade e publicação de projetos.</li>
+  <li><strong>Cursos Complementares – Alura</strong> (84h): Ruby on Rails 3 e 4, Git/GitHub, JavaScript básico e páginas dinâmicas.</li>
+  <li><strong>Estudos Autônomos</strong>: Aprofundamento via YouTube, fóruns e documentações oficiais de Ruby, Rails, PostgreSQL e Git.</li>
+</ul>
+
+<h2>Habilidades Técnicas</h2>
+<ul>
+  <li>Desenvolvimento full-stack com Ruby on Rails.</li>
+  <li>Controle de versão com Git e colaboração via GitHub.</li>
+  <li>Configuração de ambientes com Docker e Linux.</li>
+  <li>Conhecimento em JavaScript, HTML e CSS para interfaces dinâmicas.</li>
+  <li>Gerenciamento de bancos de dados com PostgreSQL.</li>
+</ul>
+
+<h2>Entre em Contato</h2>
+    <p>Estou pronto para contribuir com minha paixão por programação e minha disposição para aprender em sua equipe. Conecte-se comigo pelo <a href="mailto:Robsonmes11@gmail.com">email</a> ou <a href=https://wa.me/557788502106>whatsApp</a>
+
+<h2>Curriculo</h2>
+    <p class="curriculo-about"><%= link_to "Download Currículo", "/Curriculo.pdf" %></p>
+</div>
+</body>
+</html>

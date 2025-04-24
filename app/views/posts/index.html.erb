@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Blog</title>
+    <meta charset="utf-8">
+  </head>
+  <header>  
+        <nav>
+            <ul class='nav-links'>
+                <li><a> <%= link_to "Home", root_path %></a></li>
+                <li><a> <%= link_to "Sobre mim", about_path %></a></li>
+                <li><a> <%= link_to "Contato", contact_path %></a></li>
+            </ul>
+        </nav>
+
+        </header>
+        <h2 class="banner">Projetos</h2>
+        <div class="line"></div>
+  <body>
+      <div class="row">
+        <div class="leftcolumn">
+            <% @posts.each do |post| %>
+              <div class="card">
+                <h2><%= link_to post.title, post_path(post), class: "card-title" %></h2>
+                <h5 class="card-date"><%= post.start_date&.strftime("%d/%m/%Y") %></h5>
+                  <% if post.image.attached? %>
+                    <%= link_to post_path(post) do %>
+                    <%= image_tag post.image, style: "width:100%" %>
+                    <% end %>
+                  <% else %>
+                    <div class="fakeimg" style="height:200px;">No image</div>
+                  <% end %>
+                <p class="card-sub-title"><%= post.content %></p>
+              </div>
+            <% end %>
+        </div>
+      </div>
+
+  <div class="footer">
+  </div>
+  </body>
+  <footer>
+        
+  </footer>
+</html>

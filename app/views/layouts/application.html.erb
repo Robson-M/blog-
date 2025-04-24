@@ -16,12 +16,42 @@
     <link rel="icon" href="/icon.png" type="image/png">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
-
+      
+    <%= stylesheet_link_tag 'show' if controller_name == 'posts' && action_name == 'show' %>
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <link rel="stylesheet" href="[invalid url, do not cite]>
   </head>
 
   <body>
     <%= yield %>
   </body>
+  <footer>
+  <div class="footer-container">
+    <div class="footer-column">
+      <nav>
+        <ul class="nav">
+          <li><%= link_to "Home", root_path %></li>
+          <li><a"><%= link_to "Sobre Mim", about_path %></a></li>
+          <li><a> <%= link_to "Contato", contact_path %></a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-column">
+      <div class="social-links">
+        <a href=https://www.instagram.com/robsoonms/><i class="fab fa-instagram"></i> Instagram</a>
+        <a href=https://www.linkedin.com/in/robson-mesquita-45ab00358/><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href=https://github.com/Robson-M><i class="fab fa-github"></i> GitHub</a>
+      </div>
+    </div>
+    <div class="footer-column">
+      <div class="contact-info">
+        <p>WhatsApp: <a href=https://wa.me/557788502106>+55 77 8850-2106</a></p>
+        <p>Email: <a href=mailto:Robsonmes11@gmail.com>Robsonmes11@gmail.com</a></p>
+        <p>Telefone: <a href="tel:+0987654321">+55 77 9 8850-2106</a></p>
+        <p><a><%= link_to "Currículo", "/Curriculo.pdf" %></a></p>
+      </div>
+    </div>
+  </div>
+</footer>
 </html>
