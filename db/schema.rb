@@ -56,3 +56,5 @@ ActiveRecord::Schema[8.0].define(version: 2025_04_23_021822) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
 end
+
+# post.image.attach(io: File.open("/image/image.jpg"), filename: "image.jpg")
